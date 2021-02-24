@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run lint
+npm run lint-scss
+# npm test
+npm run pretty-quick
+
+#{
+# "hooks": {
+#   "pre-commit": "npm run pre-commit",
+#   "commit-msg": "npm run commit-msg",
+# }
+#}

@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-empty-line-before": null,
+
+    "max-empty-lines": 1,
+    "no-duplicate-selectors": true,
+    "selector-class-pattern": [
+      "^[a-z0-9-]+(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
+      {
+        "message": "Please follow BEM naming conventions",
+        "resolveNestedSelectors": true
+      }
+    ],
+    "selector-max-compound-selectors": [
+      1,
+      {
+        "message": "Descendent selectors break encapsulation and are bad for performance. Please try using BEM class names instead and nesting/combining them with &",
+        "severity": "warning"
+      }
+    ],
+    "no-descending-specificity": null
+  }
+}
